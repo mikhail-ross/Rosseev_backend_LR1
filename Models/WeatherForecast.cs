@@ -1,4 +1,4 @@
-namespace Rosseev_backend_LR1
+namespace Rosseev_backend_LR1.Models
 {
     public class WeatherForecast
     {

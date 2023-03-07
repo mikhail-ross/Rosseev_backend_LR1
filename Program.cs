@@ -1,4 +1,5 @@
-
+using Rosseev_backend_LR1.Models;
+using Microsoft.EntityFrameworkCore;
 namespace Rosseev_backend_LR1
 {
     public class Program
@@ -6,6 +7,8 @@ namespace Rosseev_backend_LR1
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<InstrumentsContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("InstrumentsContext")));
 
             // Add services to the container.
 
